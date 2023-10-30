@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>生年月日から学年・学歴早見表を表示するプログラム</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
+</head>
+<body onload="reload();">
+    <header>
+        <h1>生年月日から学年・学歴早見表を表示するプログラム</h1>
+        <div id="formYMD">
+            <div>
+                以下に生年月日を入力してください。
+            </div>
+            <div id="inputYMDCenter">
+                <select name="year" id="inputYear" onchange="changeYM();">
+                    <option value="-" selected>-</option>
+                </select>
+                <span class="labelYMD">年</span>
+                <select name="month" id="inputMonth" onchange="changeYM();">
+                    <option value="-" selected>-</option>
+                </select>
+                <span class="labelYMD">月</span>
+                <select name="day" id="inputDay" onchange="settingDate()">
+                    <option value="-" selected>-</option>
+                </select>
+                <span class="labelYMD">日</span>
+                <span class="labelYMD">
+                    <span>&#x0028;</span><!-- 括弧を表示する -->
+                    <span id="labelAge">
+                        -<!-- 現在の年齢が表示される -->
+                    </span>
+                    <span>歳&#x0029;</span><!-- 括弧を表示する -->
+                </span>
+            </div>
+        </div>
+        <div id="btnCenter">
+            <input type="button" class="btn btnpush" value="実行" onclick="outputButton()">
+            <input type="button" class="btn btnpush" value="クリア" onclick="clearButton()">
+        </div>
+    </header>
+    <div id="output">
+        <div id="output1">
+            <!-- 学年一覧が表示される -->
+        </div>
+        <div id="output2">
+            <!-- 学歴一覧が表示される -->
+        </div>
+    </div>
+    <div id="outputMessage">
+        <!-- 注意事項のメッセージが表示される -->
+    </div>
+</body>
+</html>
