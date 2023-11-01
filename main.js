@@ -63,29 +63,29 @@ function outputButton() {
     // 学年早見表を表示させる処理
     tableLoop = "<table><tr><th>学年</th><th>期間</th>";
     for (i = 0; i < arrGrade.length; i++) {
-      tableLoop = tableLoop + "<tr><td class='tbCenter'>";
+      tableLoop += "<tr><td class='tbCenter'>";
       // 学年 (小学1年～大学4年まで表示) ※浪人・留年等は一切考慮しない
-      tableLoop = tableLoop + arrGrade[i];
-      tableLoop = tableLoop + "</td><td>";
+      tableLoop += arrGrade[i];
+      tableLoop += "</td><td>";
       // 期間 (2000年生まれの小学1年は2007年 4月 1日～2008年 3月31日)
-      tableLoop = tableLoop + (b_fiscalyear + i + 7) + "<span>年</span> 4<span>月</span> 1<span>日</span>～" + (b_fiscalyear + i + 8) + "<span>年</span> 3<span>月</span>31<span>日</span>";
-      tableLoop = tableLoop + "</td></tr>";
+      tableLoop += (b_fiscalyear + i + 7) + "<span>年</span> 4<span>月</span> 1<span>日</span>～" + (b_fiscalyear + i + 8) + "<span>年</span> 3<span>月</span>31<span>日</span>";
+      tableLoop += "</td></tr>";
     }
-    tableLoop = tableLoop + "</table>";
+    tableLoop += "</table>";
     document.getElementById("output1").innerHTML = tableLoop; // HTMLに出力する
 
     // 学歴早見表を表示させる処理
     tableLoop = "<table><tr><th>学歴</th><th>年月</th>";
     for (i = 0; i < arrEducationalBackground.length; i++) {
-      tableLoop = tableLoop + "<tr><td>";
+      tableLoop += "<tr><td>";
       // 学歴を中学卒業～大学卒業まで表示
-      tableLoop = tableLoop + arrEducationalBackground[i][0];
-      tableLoop = tableLoop + "</td><td class='tbCenter'>";
+      tableLoop += arrEducationalBackground[i][0];
+      tableLoop += "</td><td class='tbCenter'>";
       // 各学歴に対応した年月を表示させる ※2000年生まれの中学卒業は2016年3月
-      tableLoop = tableLoop + (b_fiscalyear + arrEducationalBackground[i][1]) + "<span>年</span> " + arrEducationalBackground[i][2] + "<span>月</span>";
-      tableLoop = tableLoop + "</td></tr>";
+      tableLoop += (b_fiscalyear + arrEducationalBackground[i][1]) + "<span>年</span> " + arrEducationalBackground[i][2] + "<span>月</span>";
+      tableLoop += "</td></tr>";
     }
-    tableLoop = tableLoop + "</table>";
+    tableLoop += "</table>";
     document.getElementById("output2").innerHTML = tableLoop; // HTMLに出力する
 
     // 注意事項のメッセージが表示される
