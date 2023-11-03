@@ -1,5 +1,9 @@
+#btnCenter {
+    padding: 5px 0;
+}
+
 .btn {
-    width: 60px; /* ボタンの幅 */
+    min-width: 60px; /* ボタンの幅 */
     position: relative;
     box-shadow: 2px 2px;
     text-decoration: none;
@@ -15,6 +19,8 @@
     border-radius: 5px;
     color:#333;
     transition: all 0.2s ease; /* アニメーション */
+
+    margin-right: 5px;
 }
 
 .btn:hover {
