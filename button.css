@@ -3,7 +3,7 @@
 }
 
 .btn {
-    min-width: 60px; /* ボタンの幅 */
+    min-width: 65px; /* ボタンの幅 */
     position: relative;
     box-shadow: 2px 2px;
     text-decoration: none;
